@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_css"
+        android:title="CSS"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_csr"
+        android:title="CSR"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_voice_chatbot"
+        android:title="음성챗봇"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_auth"
+        android:title="인증설정"
+        app:showAsAction="never"/>
+
+</menu>

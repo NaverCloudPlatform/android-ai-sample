@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="css_lang_spinner">
+
+        <item>mijin(한국어)</item>
+        <item>jinho(한국어)</item>
+        <item>clara(영어)</item>
+        <item>matt(영어)</item>
+        <item>shinji(일본어)</item>
+        <item>meimei(중국어)</item>
+        <item>liangliang(중국어)</item>
+        <item>jose(스페인어)</item>
+        <item>carmen(스페인어)</item>
+
+    </string-array>
+
+
+
+</resources>
+
