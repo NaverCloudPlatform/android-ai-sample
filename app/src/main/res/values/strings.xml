@@ -2,5 +2,9 @@
     <string name="app_name">NCP AI Demo</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="str_start">말하기</string>
+    <string name="str_stop">중지</string>
+
 </resources>

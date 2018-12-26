@@ -6,11 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".CsrActivity">
 
-    <TextView
-        android:id="@+id/textView3"
+    <Button
+        android:id="@+id/btn_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CSR"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="187dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/str_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_start"
+        android:layout_centerHorizontal="true"
+        android:singleLine="false" />
+
+
 </android.support.constraint.ConstraintLayout>
