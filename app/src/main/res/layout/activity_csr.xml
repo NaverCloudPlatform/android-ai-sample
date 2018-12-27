@@ -6,13 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".CsrActivity">
 
-    <Button
-        android:id="@+id/btn_start"
+    <TextView
+        android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="55dp"
+        android:text="말하기 버튼을 선택하고 음성을 입력해주세요."
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="55dp"
+        android:text="Clova Speech Recognition(CSR)"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="314dp"
+        android:layout_height="42dp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="8dp"
         android:text="@string/str_start"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,6 +55,17 @@
         android:layout_below="@id/btn_start"
         android:layout_centerHorizontal="true"
         android:singleLine="false" />
+
+    <TextView
+        android:id="@+id/textViewCsrResult"
+        android:layout_width="314dp"
+        android:layout_height="214dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_start"
+        app:layout_constraintStart_toStartOf="@+id/btn_start"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start" />
 
 
 </android.support.constraint.ConstraintLayout>

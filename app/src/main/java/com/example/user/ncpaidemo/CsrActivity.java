@@ -81,7 +81,7 @@ public class CsrActivity extends BaseActivity {
         SharedPreferences sharedPref = getSharedPreferences("PREF", Context.MODE_PRIVATE);
         String clientId = sharedPref.getString("client_id", "");
 
-        txtResult = (TextView) findViewById(R.id.txt_result);
+        txtResult = (TextView) findViewById(R.id.textViewCsrResult);
         btnStart = (Button) findViewById(R.id.btn_start);
         handler = new RecognitionHandler(this);
         naverRecognizer = new NaverRecognizer(this, handler, clientId);
