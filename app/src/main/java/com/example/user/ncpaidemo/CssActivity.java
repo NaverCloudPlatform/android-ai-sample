@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.ncp.ai.demo.process.ClovaCSS;
+import com.ncp.ai.demo.process.CssProc;
 
 public class CssActivity extends BaseActivity {
 
@@ -30,8 +30,8 @@ public class CssActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                EditText cssInputText = (EditText) findViewById(R.id.text_input_css) ;
-                String strText = cssInputText.getText().toString() ;
+                EditText cssInputText = (EditText) findViewById(R.id.text_input_css);
+                String strText = cssInputText.getText().toString();
 
                 Spinner spinner = (Spinner)findViewById(R.id.spinner_css_lang);
                 String selItem = spinner.getSelectedItem().toString();
@@ -55,7 +55,7 @@ public class CssActivity extends BaseActivity {
         @Override
         public String doInBackground(String... strings) {
 
-            ClovaCSS.main(strings[0], strings[1], strings[2], strings[3]);
+            CssProc.main(strings[0], strings[1], strings[2], strings[3]);
             return null;
         }
     }

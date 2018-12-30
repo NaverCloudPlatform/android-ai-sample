@@ -4,12 +4,17 @@
 
     <item
         android:id="@+id/menu_css"
-        android:title="CSS"
+        android:title="Clova Speech Synthesis"
         app:showAsAction="never"/>
 
     <item
         android:id="@+id/menu_csr"
-        android:title="CSR"
+        android:title="Clova Speech Recognition"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_nmt"
+        android:title="Papago NMT"
         app:showAsAction="never"/>
 
     <item

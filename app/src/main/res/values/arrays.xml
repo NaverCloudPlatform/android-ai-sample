@@ -15,6 +15,30 @@
 
     </string-array>
 
+    <string-array name="csr_lang_source_spinner">
+
+        <item>한국어</item>
+        <item>영어</item>
+        <item>중국어(간체)</item>
+        <item>중국어(번체)</item>
+        <item>프랑스어</item>
+        <item>스페인어</item>
+        <item>베트남어</item>
+        <item>태국어</item>
+
+    </string-array>
+
+    <string-array name="csr_lang_target_spinner">
+
+        <item>영어</item>
+        <item>중국어(간체)</item>
+        <item>중국어(번체)</item>
+        <item>프랑스어</item>
+        <item>스페인어</item>
+        <item>베트남어</item>
+        <item>태국어</item>
+
+    </string-array>
 
 
 </resources>

@@ -16,7 +16,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class ClovaCSS {
+public class CssProc {
 
     public static void main(String msg, String speaker, String clientId, String clientSecret) {
 
@@ -29,7 +29,7 @@ public class ClovaCSS {
             con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", clientId);
             con.setRequestProperty("X-NCP-APIGW-API-KEY", clientSecret);
             // post request
-            String postParams = "speaker="+speaker+"&speed=0&text=" + text;
+            String postParams = "speaker="+speaker+"&speed=0&text="+text;
             con.setDoOutput(true);
             DataOutputStream wr = new DataOutputStream(con.getOutputStream());
             wr.writeBytes(postParams);

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NmtActivity">
+
+    <TextView
+        android:id="@+id/textView_nmt_result"
+        android:layout_width="308dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_input_csr_target"
+        app:layout_constraintStart_toStartOf="@+id/text_input_csr_target"
+        app:layout_constraintTop_toBottomOf="@+id/btn_csr_translate" />
+
+    <Button
+        android:id="@+id/btn_csr_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="번역하기"
+        app:layout_constraintEnd_toEndOf="@+id/text_input_csr_target"
+        app:layout_constraintStart_toStartOf="@+id/text_input_csr_target"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_csr_target" />
+
+    <EditText
+        android:id="@+id/text_input_csr_target"
+        android:layout_width="320dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="안녕하세요"
+        app:layout_constraintBottom_toTopOf="@+id/btn_css"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="55dp"
+        android:text="번역할 문장을 입력하고 번역 버튼을 선택 해주세요."
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="->"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintBottom_toTopOf="@+id/text_input_csr_target"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <Spinner
+        android:id="@+id/csr_lang_source_spinner"
+        android:layout_width="129dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:entries="@array/csr_lang_source_spinner"
+        app:layout_constraintBottom_toTopOf="@+id/text_input_csr_target"
+        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="@+id/text_input_csr_target"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"></Spinner>
+
+    <Spinner
+        android:id="@+id/csr_lang_target_spinner"
+        android:layout_width="131dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:entries="@array/csr_lang_target_spinner"
+        app:layout_constraintBottom_toTopOf="@+id/text_input_csr_target"
+        app:layout_constraintEnd_toEndOf="@+id/text_input_csr_target"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"></Spinner>
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="55dp"
+        android:text="Papago NMT"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

@@ -11,18 +11,18 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 
+import com.ncp.ai.demo.process.CsrProc;
 import com.ncp.ai.utils.AudioWriterPCM;
 import com.naver.speech.clientapi.SpeechRecognitionResult;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
-import com.ncp.ai.utils.*;
 
 public class CsrActivity extends BaseActivity {
 
     private static final String TAG = CsrActivity.class.getSimpleName();
     private RecognitionHandler handler;
-    private NaverRecognizer naverRecognizer;
+    private CsrProc naverRecognizer;
     private TextView txtResult;
     private Button btnStart;
     private String mResult;
@@ -84,7 +84,7 @@ public class CsrActivity extends BaseActivity {
         txtResult = (TextView) findViewById(R.id.textViewCsrResult);
         btnStart = (Button) findViewById(R.id.btn_start);
         handler = new RecognitionHandler(this);
-        naverRecognizer = new NaverRecognizer(this, handler, clientId);
+        naverRecognizer = new CsrProc(this, handler, clientId);
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

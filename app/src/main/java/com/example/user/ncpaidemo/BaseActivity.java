@@ -46,6 +46,13 @@ public class BaseActivity extends AppCompatActivity {
                 startActivity(intent);
 
                 return true;
+            case R.id.menu_nmt:
+
+                intent = new Intent(getApplicationContext(), NmtActivity.class);
+                startActivity(intent);
+
+                return true;
+
             default :
                 return super.onOptionsItemSelected(item);
         }

@@ -1,4 +1,4 @@
-package com.ncp.ai.utils;
+package com.ncp.ai.demo.process;
 
 import android.content.Context;
 import android.os.Handler;
@@ -15,14 +15,14 @@ import com.naver.speech.clientapi.SpeechRecognitionListener;
 import com.naver.speech.clientapi.SpeechRecognitionResult;
 import com.naver.speech.clientapi.SpeechRecognizer;
 
-public class NaverRecognizer implements SpeechRecognitionListener {
+public class CsrProc implements SpeechRecognitionListener {
 
-	private final static String TAG = NaverRecognizer.class.getSimpleName();
+	private final static String TAG = CsrProc.class.getSimpleName();
 
 	private Handler mHandler;
 	private SpeechRecognizer mRecognizer;
 
-	public NaverRecognizer(Context context, Handler handler, String clientId) {
+	public CsrProc(Context context, Handler handler, String clientId) {
 		this.mHandler = handler;
 
 		try {
