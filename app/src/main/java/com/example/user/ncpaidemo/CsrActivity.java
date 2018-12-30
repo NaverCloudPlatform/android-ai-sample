@@ -79,7 +79,7 @@ public class CsrActivity extends BaseActivity {
         setContentView(R.layout.activity_csr);
 
         SharedPreferences sharedPref = getSharedPreferences("PREF", Context.MODE_PRIVATE);
-        String clientId = sharedPref.getString("client_id", "");
+        String clientId = sharedPref.getString("clova_client_id", "");
 
         txtResult = (TextView) findViewById(R.id.textViewCsrResult);
         btnStart = (Button) findViewById(R.id.btn_start);

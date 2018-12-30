@@ -11,8 +11,3 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
     }
 }
-
-
-// http://javannspring.tistory.com/145
-// http://recipes4dev.tistory.com/141
-// http://black-jin0427.tistory.com/49

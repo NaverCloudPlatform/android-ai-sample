@@ -21,8 +21,8 @@ public class CssActivity extends BaseActivity {
         setContentView(R.layout.activity_css);
 
         SharedPreferences sharedPref = getSharedPreferences("PREF", Context.MODE_PRIVATE);
-        final String clientId = sharedPref.getString("client_id", "");
-        final String clientSecret = sharedPref.getString("client_secret", "");
+        final String clientId = sharedPref.getString("clova_client_id", "");
+        final String clientSecret = sharedPref.getString("clova_client_secret", "");
 
         cssBtn = (Button) findViewById(R.id.btn_css);
         cssBtn.setOnClickListener(new View.OnClickListener() {
