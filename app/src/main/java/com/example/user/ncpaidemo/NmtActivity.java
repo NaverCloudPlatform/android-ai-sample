@@ -18,9 +18,6 @@ import org.json.JSONObject;
 
 public class NmtActivity extends BaseActivity {
 
-    private String g_result = "";
-    private TextView txtResult;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,12 +45,9 @@ public class NmtActivity extends BaseActivity {
                 Spinner csrTragetSpinner = (Spinner)findViewById(R.id.csr_lang_target_spinner);
                 String selTargetItem = csrTragetSpinner.getSelectedItem().toString();
 
-                System.out.println("##>>> "+convertLangItem(selSourceItem));
-                System.out.println("##>>> "+convertLangItem(selTargetItem));
-
                 NmtActivity.PapagoNmtTask nmtTask = new NmtActivity.PapagoNmtTask();
                 nmtTask.execute(text, convertLangItem(selSourceItem), convertLangItem(selTargetItem),
-                        "2k9h1l8ny7", "DSjv517jW681epcSVMgymItqZpu3YgabLzr77two");
+                        nmtClientId, nmtClientSecret);
             }
         });
 
@@ -63,7 +57,6 @@ public class NmtActivity extends BaseActivity {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
                 System.out.println("## position : " + position + parent.getItemAtPosition(position));
-
 
                 String[] items;
 
@@ -102,7 +95,7 @@ public class NmtActivity extends BaseActivity {
             text = jsonObject.getString("translatedText");
 
             //System.out.println(text);
-            txtResult = (TextView) findViewById(R.id.textView_nmt_result);
+            TextView txtResult = (TextView) findViewById(R.id.textView_nmt_result);
             txtResult.setText(text);
 
         } catch (Exception e){
