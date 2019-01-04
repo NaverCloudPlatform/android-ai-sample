@@ -16,6 +16,10 @@
         android:id="@+id/menu_nmt"
         android:title="Papago NMT"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_csr_nmt_css"
+        android:title="CSR+PapagoNMT+CSS"
+        app:showAsAction="never"/>
 
     <item
         android:id="@+id/menu_voice_chatbot"

@@ -26,6 +26,7 @@
         <activity android:name=".AuthActivity" />
         <activity android:name=".VoiceChatbotActivity" />
         <activity android:name=".NmtActivity"></activity>
+        <activity android:name=".NmtActivity2"/>
     </application>
 
 </manifest>

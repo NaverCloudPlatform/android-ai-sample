@@ -40,6 +40,19 @@
 
     </string-array>
 
+    <string-array name="nmt_lang_source_spinner">
+        <item>한국어</item>
+    </string-array>
+
+    <string-array name="nmt_lang_target_spinner">
+
+        <item>영어</item>
+        <item>일본어</item>
+        <item>중국어(간체)</item>
+        <item>스페인어</item>
+
+    </string-array>
+
 
 </resources>
 

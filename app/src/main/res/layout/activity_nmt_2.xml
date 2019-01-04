@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NmtActivity">
+
+
+    <TextView
+        android:id="@+id/textView_nmt2"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="55dp"
+        android:text="CSR + Papago NMT + CSS"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="55dp"
+        android:text="[말하기] 버튼을 Click하시고 음성을 입력해주세요."
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_nmt2" />
+
+    <Spinner
+        android:id="@+id/nmt_lang_source_spinner"
+        android:layout_width="129dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="20dp"
+        android:entries="@array/nmt_lang_source_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/textView_notice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        ></Spinner>
+
+    <Spinner
+        android:id="@+id/nmt_lang_target_spinner"
+        android:layout_width="131dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="197dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:entries="@array/nmt_lang_target_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/textView_notice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"></Spinner>
+
+    <TextView
+        android:id="@+id/textView_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="->"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintEnd_toEndOf="@+id/nmt_lang_target_spinner"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/textView_notice"
+        app:layout_constraintTop_toBottomOf="@+id/textView_notice" />
+
+    <Button
+        android:id="@+id/btn_csr_start"
+        android:layout_width="322dp"
+        android:layout_height="38dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/str_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_notice" />
+
+
+    <TextView
+        android:id="@+id/text_csr_result"
+        android:layout_width="314dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back"
+        android:text="스피커를 통해 얘기하세요."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_csr_start" />
+
+
+    <Button
+        android:id="@+id/btn_nmt_start"
+        android:layout_width="322dp"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="다시듣기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_csr_result" />
+
+    <TextView
+        android:id="@+id/text_nmt_target"
+        android:layout_width="314dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back"
+        android:inputType="textMultiLine"
+        android:text="번역결과"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_nmt_start" />
+
+</android.support.constraint.ConstraintLayout>
