@@ -30,6 +30,7 @@ public class CssProc {
             con.setRequestProperty("X-NCP-APIGW-API-KEY", clientSecret);
             // post request
             String postParams = "speaker="+speaker+"&speed=0&text="+text;
+            System.out.println(postParams);
             con.setDoOutput(true);
             DataOutputStream wr = new DataOutputStream(con.getOutputStream());
             wr.writeBytes(postParams);

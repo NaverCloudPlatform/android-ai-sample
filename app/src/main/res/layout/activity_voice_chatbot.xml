@@ -7,10 +7,84 @@
     tools:context=".VoiceChatbotActivity">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/text_voice_chatbot_replay"
+        android:layout_width="314dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/back"
+        android:inputType="textMultiLine"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_voice_chatbot_replay" />
+
+    <Button
+        android:id="@+id/btn_voice_chatbot_replay"
+        android:layout_width="322dp"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="다시듣기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVoiceChatbotResult" />
+
+    <TextView
+        android:id="@+id/textViewVoiceChatbotResult"
+        android:layout_width="314dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/back"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_voice_chatbot1"
+        app:layout_constraintStart_toStartOf="@+id/btn_voice_chatbot1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_voice_chatbot1" />
+
+    <Button
+        android:id="@+id/btn_voice_chatbot1"
+        android:layout_width="314dp"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/str_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="VoiceChatbot"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="187dp" />
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="55dp"
+        android:text="말하기 버튼을 선택하고 음성을 입력해주세요."
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="55dp"
+        android:text="Voice Chatbot"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

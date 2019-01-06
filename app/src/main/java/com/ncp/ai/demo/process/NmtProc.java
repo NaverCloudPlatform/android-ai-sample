@@ -50,10 +50,7 @@ public class NmtProc {
             br.close();
             System.out.println(response.toString());
 
-
             translate = response.toString();
-
-
 
         } catch (Exception e) {
             System.out.println(e);

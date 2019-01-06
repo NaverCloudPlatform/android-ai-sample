@@ -61,6 +61,7 @@
         android:layout_width="314dp"
         android:layout_height="214dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/back"
         android:text="TextView"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/btn_start"
