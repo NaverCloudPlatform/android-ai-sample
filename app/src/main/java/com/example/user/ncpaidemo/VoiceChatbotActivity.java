@@ -139,24 +139,19 @@ public class VoiceChatbotActivity extends BaseActivity {
     private void requestChatbot() {
 
         SharedPreferences sharedPref = getSharedPreferences("PREF", Context.MODE_PRIVATE);
-        String secretKey = sharedPref.getString("clova_client_id", "");
-        String apiURL = sharedPref.getString("clova_client_id", "");
 
-        secretKey = "VHRycEdhZVdNT2twQWhlY3VqTHdJZ2dlZ3liS1ROa0s=";
-        apiURL = "https://ex9av8bv0e.apigw.ntruss.com/custom_chatbot/prod/";
+        String chatbotApiGwUrl = sharedPref.getString("chatbot_api_gw_url", "");
+        String chatbotSecretKey = sharedPref.getString("chatbot_secret_key", "");
 
         TextView csrSourceText = (TextView)findViewById(R.id.textViewVoiceChatbotResult);
         String text = csrSourceText.getText().toString();
 
-        System.out.println("## >> "+text);
-
         VoiceChatbotActivity.VoiceChatbotTask task = new VoiceChatbotActivity.VoiceChatbotTask();
-        task.execute(text, apiURL, secretKey);
+        task.execute(text, chatbotApiGwUrl, chatbotSecretKey);
     }
 
     @Override
     protected void onStart() {
-        System.out.println("시작!!!");
         super.onStart(); // 음성인식 서버 초기화는 여기서
         naverRecognizer.getSpeechRecognizer().initialize();
     }
@@ -232,13 +227,12 @@ public class VoiceChatbotActivity extends BaseActivity {
                     chatbotMessage = bubble.getJSONObject("data").getJSONObject("cover").getJSONObject("data").getString("description");
 
                 }else {
-                    System.out.println("unknown Type");
+                    chatbotMessage = "";
                 }
 
                 TextView txtResult = (TextView) findViewById(R.id.text_voice_chatbot_replay);
                 txtResult.setText(chatbotMessage);
 
-                System.out.println("#### "+chatbotMessage);
                 break;
             }
 

@@ -110,6 +110,7 @@
         android:background="@drawable/back"
         android:text="마이크를 통해 얘기하세요."
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_csr_start" />
@@ -137,6 +138,7 @@
         android:inputType="textMultiLine"
         android:text="번역결과"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_nmt_start" />
