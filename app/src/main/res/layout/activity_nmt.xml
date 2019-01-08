@@ -12,6 +12,7 @@
         android:layout_height="94dp"
         android:layout_marginTop="16dp"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/text_input_csr_target"
         app:layout_constraintStart_toStartOf="@+id/text_input_csr_target"
         app:layout_constraintTop_toBottomOf="@+id/btn_csr_translate" />

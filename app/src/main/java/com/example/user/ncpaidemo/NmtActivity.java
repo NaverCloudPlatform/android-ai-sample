@@ -25,8 +25,8 @@ public class NmtActivity extends BaseActivity {
 
         SharedPreferences sharedPref = getSharedPreferences("PREF", Context.MODE_PRIVATE);
 
-        final String nmtClientId = sharedPref.getString("nmt_client_id", "");
-        final String nmtClientSecret = sharedPref.getString("nmt_client_secret", "");
+        final String nmtClientId = sharedPref.getString("application_client_id", "");
+        final String nmtClientSecret = sharedPref.getString("application_client_secret", "");
 
         Button csrTranslateBtn;
 

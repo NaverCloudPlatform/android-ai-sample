@@ -22,11 +22,19 @@ public class CsrProc implements SpeechRecognitionListener {
 	private Handler mHandler;
 	private SpeechRecognizer mRecognizer;
 
-	public CsrProc(Context context, Handler handler, String clientId) {
+	private static CsrProc instance;
+
+	public void setHandler(Handler handler) {
+
 		this.mHandler = handler;
+
+	}
+
+	public CsrProc(Context context, String clientId) {
 
 		try {
 			mRecognizer = new SpeechRecognizer(context, clientId);
+
 		} catch (SpeechRecognitionException e) {
 			// 예외가 발생하는 경우는 아래와 같습니다.
 			//   1. activity 파라미터가 올바른 MainActivity의 인스턴스가 아닙니다.
@@ -42,15 +50,32 @@ public class CsrProc implements SpeechRecognitionListener {
 		mRecognizer.setSpeechRecognitionListener(this);
 	}
 
+	public static CsrProc getCsrProc(Context context,  String clientId) {
+
+		if(instance == null) {
+
+			instance = new CsrProc(context, clientId);
+		}
+
+		return instance;
+	}
+
 	public SpeechRecognizer getSpeechRecognizer() {
 		return mRecognizer;
 	}
 
 	public void recognize() {
 		try {
-			mRecognizer.recognize(new SpeechConfig(
+
+			if (mRecognizer.recognize(new SpeechConfig(
 									LanguageType.KOREAN,
-									EndPointDetectType.AUTO));
+									EndPointDetectType.AUTO))){
+
+				System.out.println("### true");
+
+			}else {
+				System.out.println("### false");
+			}
 		} catch (SpeechRecognitionException e) {
 			e.printStackTrace();
 		}

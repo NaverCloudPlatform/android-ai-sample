@@ -8,13 +8,24 @@
 
 
     <TextView
+        android:id="@+id/textView17"
+        android:layout_width="159dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="24dp"
+        android:text="Papago NMT 번역결과"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_csr_result" />
+
+    <TextView
         android:id="@+id/textView_nmt2"
         android:layout_width="wrap_content"
         android:layout_height="17dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="55dp"
-        android:text="CSR + Papago NMT + CSS"
+        android:text="음성번역 (CSR + Papago NMT + CSS)"
         android:textColor="@android:color/background_dark"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +93,7 @@
         android:layout_height="38dp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="8dp"
         android:text="@string/str_start"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,12 +121,12 @@
         android:layout_height="42dp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="다시듣기"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_csr_result" />
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <TextView
         android:id="@+id/text_nmt_target"

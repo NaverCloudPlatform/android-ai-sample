@@ -22,7 +22,7 @@ public class AudioWriterPCM {
 		if (!directory.exists()) {
 			directory.mkdirs();
 		}
-	
+
 		filename = directory + "/" + sessionId + ".pcm";
 		try {
 			speechFile = new FileOutputStream(new File(filename));

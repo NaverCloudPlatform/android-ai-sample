@@ -23,6 +23,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/txt_view_app_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_auth"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_application_client_secret" />
+
+    <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="17dp"
@@ -57,12 +71,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="13dp"
-        android:layout_marginEnd="300dp"
         android:text="API GW URL"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_input_nmt_client_id" />
+        app:layout_constraintTop_toTopOf="@+id/text_input_chatbot_api_gw_url" />
 
     <TextView
         android:id="@+id/textView8"
@@ -83,16 +94,13 @@
         android:layout_height="21dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="272dp"
         android:text="Secret Key"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/text_input_clova_client_id"
-        android:layout_width="252dp"
+        android:id="@+id/text_input_chatbot_api_gw_url"
+        android:layout_width="270dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
@@ -102,27 +110,42 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_auth" />
+
+    <EditText
+        android:id="@+id/text_input_application_client_secret"
+        android:layout_width="270dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_application_client_secret2" />
+
+    <EditText
+        android:id="@+id/text_input_application_client_secret2"
+        android:layout_width="270dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.928"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/text_input_nmt_client_id"
-        android:layout_width="252dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/btn_auth" />
-
-    <EditText
-        android:id="@+id/text_input_clova_client_secret"
-        android:layout_width="251dp"
+        android:id="@+id/text_input_chatbot_secret_key"
+        android:layout_width="270dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -132,23 +155,8 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_clova_client_id" />
-
-    <EditText
-        android:id="@+id/text_input_nmt_client_secret"
-        android:layout_width="251dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_nmt_client_id" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_chatbot_api_gw_url" />
 
     <Button
         android:id="@+id/btn_auth"
@@ -160,10 +168,10 @@
         android:text="저장"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_clova_client_secret" />
+        app:layout_constraintTop_toBottomOf="@+id/text_input_application_client_secret" />
 
     <Button
-        android:id="@+id/btn_nmt_auth"
+        android:id="@+id/btn_chatbot"
         android:layout_width="84dp"
         android:layout_height="37dp"
         android:layout_marginStart="8dp"
@@ -172,5 +180,5 @@
         android:text="저장"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_nmt_client_secret" />
+        app:layout_constraintTop_toBottomOf="@+id/text_input_chatbot_secret_key" />
 </android.support.constraint.ConstraintLayout>

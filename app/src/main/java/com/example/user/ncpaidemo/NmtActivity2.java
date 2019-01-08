@@ -50,13 +50,15 @@ public class NmtActivity2 extends BaseActivity {
 
         SharedPreferences sharedPref = getSharedPreferences("PREF", Context.MODE_PRIVATE);
 
-        clientId = sharedPref.getString("clova_client_id", "");
-        clientSecret = sharedPref.getString("clova_client_secret", "");
+        clientId = sharedPref.getString("application_client_id", "");
+        clientSecret = sharedPref.getString("application_client_secret", "");
 
         txtCsrResult = (TextView) findViewById(R.id.text_csr_result);
         btnCsrStart = (Button) findViewById(R.id.btn_csr_start);
         handler = new NmtActivity2.RecognitionHandler(this);
-        naverRecognizer = new CsrProc(this, handler, clientId);
+        //naverRecognizer = new CsrProc(this, handler, clientId);
+        naverRecognizer = CsrProc.getCsrProc(this, clientId);
+        naverRecognizer.setHandler(handler);
         btnCsrStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,8 +77,8 @@ public class NmtActivity2 extends BaseActivity {
 
 
         /************ Papago NMT **************/
-        nmtClientId = sharedPref.getString("nmt_client_id", "");
-        nmtClientSecret = sharedPref.getString("nmt_client_secret", "");
+        nmtClientId = sharedPref.getString("application_client_id", "");
+        nmtClientSecret = sharedPref.getString("application_client_secret", "");
 
         Button csrTranslateBtn;
 
@@ -117,11 +119,12 @@ public class NmtActivity2 extends BaseActivity {
         btnCsrStart.setText(R.string.str_start);
         btnCsrStart.setEnabled(true);
     }
-    @Override
-    protected void onStop() {
-        super.onStop(); // 음성인식 서버 종료
-        naverRecognizer.getSpeechRecognizer().release();
-    }
+//    @Override
+//    protected void onStop() {
+//        super.onStop(); // 음성인식 서버 종료
+//        System.out.println("## On Stop");
+//        naverRecognizer.getSpeechRecognizer().release();
+//    }
     // Declare handler for handling SpeechRecognizer thread's Messages.
     static class RecognitionHandler extends Handler {
         private final WeakReference<NmtActivity2> mActivity;
@@ -164,6 +167,7 @@ public class NmtActivity2 extends BaseActivity {
                 }
                 mCsrResult = strBuf.toString();
                 txtCsrResult.setText(mCsrResult);
+
                 translateNmt();
                 break;
             case R.id.recognitionError:
@@ -225,8 +229,6 @@ public class NmtActivity2 extends BaseActivity {
         } catch (Exception e){
 
         }
-
-
     }
 
     public class PapagoNmtTask extends AsyncTask<String, String, String> {
@@ -268,8 +270,6 @@ public class NmtActivity2 extends BaseActivity {
             return "id";
         else
             return "";
-
-        // 일본어 빠졌다잉~
     }
 
 
@@ -303,8 +303,6 @@ public class NmtActivity2 extends BaseActivity {
         NmtActivity2.NaverTTSTask tts = new NmtActivity2.NaverTTSTask();
         tts.execute(strText, speaker, clientId, clientSecret);
     }
-
-
 
     public class NaverTTSTask extends AsyncTask<String, String, String> {
 

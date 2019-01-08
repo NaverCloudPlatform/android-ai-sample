@@ -1,9 +1,12 @@
 package com.example.user.ncpaidemo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Message;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 import android.os.Environment;
@@ -12,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.ncp.ai.demo.process.CsrProc;
+import com.ncp.ai.demo.process.CssProc;
 import com.ncp.ai.utils.AudioWriterPCM;
 import com.naver.speech.clientapi.SpeechRecognitionResult;
 
@@ -79,16 +83,20 @@ public class CsrActivity extends BaseActivity {
         setContentView(R.layout.activity_csr);
 
         SharedPreferences sharedPref = getSharedPreferences("PREF", Context.MODE_PRIVATE);
-        String clientId = sharedPref.getString("clova_client_id", "");
+        String clientId = sharedPref.getString("application_client_id", "");
 
         txtResult = (TextView) findViewById(R.id.textViewCsrResult);
         btnStart = (Button) findViewById(R.id.btn_start);
         handler = new RecognitionHandler(this);
-        naverRecognizer = new CsrProc(this, handler, clientId);
+        //naverRecognizer = new CsrProc(this, handler, clientId);
+        naverRecognizer = CsrProc.getCsrProc(this, clientId);
+        naverRecognizer.setHandler(handler);
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (!naverRecognizer.getSpeechRecognizer().isRunning()) {
+
                     mResult = "";
                     txtResult.setText("Connecting...");
                     btnStart.setText(R.string.str_stop);
@@ -104,6 +112,7 @@ public class CsrActivity extends BaseActivity {
 
     @Override
     protected void onStart() {
+        System.out.println("시작!!!");
         super.onStart(); // 음성인식 서버 초기화는 여기서
         naverRecognizer.getSpeechRecognizer().initialize();
     }
@@ -115,11 +124,12 @@ public class CsrActivity extends BaseActivity {
         btnStart.setText(R.string.str_start);
         btnStart.setEnabled(true);
     }
-    @Override
-    protected void onStop() {
-        super.onStop(); // 음성인식 서버 종료
-        naverRecognizer.getSpeechRecognizer().release();
-    }
+//    @Override
+//    protected void onStop() {
+//        System.out.println("CSR 종료!!!");
+//        super.onStop(); // 음성인식 서버 종료
+//        naverRecognizer.getSpeechRecognizer().release();
+//    }
     // Declare handler for handling SpeechRecognizer thread's Messages.
     static class RecognitionHandler extends Handler {
         private final WeakReference<CsrActivity> mActivity;

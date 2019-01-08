@@ -18,7 +18,7 @@
         app:showAsAction="never"/>
     <item
         android:id="@+id/menu_csr_nmt_css"
-        android:title="CSR+PapagoNMT+CSS"
+        android:title="음성번역"
         app:showAsAction="never"/>
 
     <item
