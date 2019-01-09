@@ -45,7 +45,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        android:text="CSR, CSS, Papago NMT, Chatbot을 테스트 할 수 있는 데모 앱입니다. 정상 동작을 위해서 정확한 인증정보 설정을 해주세요."
+        android:text="CSR, CSS, Papago NMT, Chatbot을 테스트할 수 있는 데모 앱입니다. 정상 동작을 위해서 정확한 인증정보 설정을 해주세요."
         android:textColor="@android:color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
