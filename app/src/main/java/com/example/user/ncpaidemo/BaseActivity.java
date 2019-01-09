@@ -22,6 +22,14 @@ public class BaseActivity extends AppCompatActivity {
         Intent intent;
 
         switch (item.getItemId()) {
+
+            case R.id.menu_home:
+
+                intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+
+                return true;
+
             case R.id.menu_auth:
 
                 intent = new Intent(getApplicationContext(), AuthActivity.class);

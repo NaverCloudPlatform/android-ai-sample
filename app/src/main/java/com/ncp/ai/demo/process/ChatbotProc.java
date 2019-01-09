@@ -70,13 +70,11 @@ public class ChatbotProc {
                 in.close();
 
             } else {  // 에러 발생
-                System.out.println(con.getResponseMessage());
+                chatbotMessage = con.getResponseMessage();
             }
         } catch (Exception e) {
             System.out.println(e);
         }
-
-        System.out.println("##>>>>>>>>>>>>>>>>> "+chatbotMessage);
 
         return chatbotMessage;
     }
@@ -86,7 +84,6 @@ public class ChatbotProc {
         String encodeBase64String = "";
 
         try {
-            //String secretKey = "VHRycEdhZVdNT2twQWhlY3VqTHdJZ2dlZ3liS1ROa0s=";
             byte[] secrete_key_bytes = secretKey.getBytes("UTF-8");
 
             SecretKeySpec signingKey = new SecretKeySpec(secrete_key_bytes, "HmacSHA256");

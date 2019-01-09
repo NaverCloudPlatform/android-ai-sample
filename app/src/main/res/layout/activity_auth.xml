@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="17dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="55dp"
         android:text="Chatbot 정보 설정"
         android:textColor="@android:color/background_dark"
@@ -103,7 +103,7 @@
         android:layout_width="270dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -111,7 +111,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_auth" />
+        app:layout_constraintTop_toBottomOf="@+id/text_input_application_client_secret" />
 
     <EditText
         android:id="@+id/text_input_application_client_secret"
@@ -168,17 +168,19 @@
         android:text="저장"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_application_client_secret" />
-
-    <Button
-        android:id="@+id/btn_chatbot"
-        android:layout_width="84dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="저장"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_input_chatbot_secret_key" />
+
+    <TextView
+        android:id="@+id/textView_rlt"
+        android:layout_width="134dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="@+id/text_input_chatbot_secret_key"
+        app:layout_constraintStart_toEndOf="@+id/btn_auth"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_chatbot_secret_key" />
+
 </android.support.constraint.ConstraintLayout>
