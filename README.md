@@ -1,4 +1,4 @@
-# android-ai-sample - Version 1.0
+# android-ai-sample - version 1.0
 
 **네이버클라우드플랫폼 AI 상품**을 더 쉽게 사용하기 위한, 안드로이드 버전 Sample 소스와 
 안드로이드 모바일에서 실행할 수 있는 apk 파일을 제공 합니다.
@@ -23,8 +23,11 @@
 * **네이버클라우드플랫폼 계정** : [네이버클라우드플랫폼](https://www.ncloud.com/) 계정 보유 및 회원가입 필요
 * **AI·NAVER API Application 등록** : [Application](https://console.ncloud.com/mc/solution/naverService/application) 등록
   - Application 등록시 Service 선택
+  
     Clova Speech Recognition(CSR), Clova Speech Synthesis(CSS), Papago NMT
+    
      ***데모앱에서 등록가능한 인증키는 하나이므로, 하나의 Application에 위 상품을 전부 등록해야 함
+     
   2 서비스 환경 등록
       - Web 서비스 URL : http://localhost
       - Android 앱 패키지 이름 : com.example.user.ncpaidemo
