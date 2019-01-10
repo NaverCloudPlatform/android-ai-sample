@@ -5,7 +5,6 @@
 
 
 ## 제공하는 AI API 데모 및 소스
-Sample 소스 및 apk 파일에 들어가 있는 AI 상품은 다음과 같습니다.
 
 * Clova Speech Synthesis(CSS) : 텍스트를 음성으로 읽어주는 음성 합성 API
 * Clova Speech Recognition(CSR) : 사람의 목소리를 텍스트로 바꿔주는 음성 인식 API
@@ -14,19 +13,19 @@ Sample 소스 및 apk 파일에 들어가 있는 AI 상품은 다음과 같습�
 
 ## API 사용자 가이드
 
-* Clova Speech Synthesis(CSS) : [API 사용자 가이드](http://docs.ncloud.com/ko/naveropenapi_v3/speech/synthesis.html)
-* Clova Speech Recognition(CSR) : [Android, iOS SDK 사용자 가이드](http://docs.ncloud.com/ko/naveropenapi_v3/speech/recognition-sdk.html), [REST API 사용자 가이드](http://docs.ncloud.com/ko/naveropenapi_v3/speech/recognition-api.html)
-* Papago NMT : 인공 신경망기반 기계 번역 API
-* Chatbot : 자연어 처리를 위한 Chatbot Custom API
+* Clova Speech Synthesis(CSS) : [REST API 사용자 가이드](http://docs.ncloud.com/ko/naveropenapi_v3/speech/synthesis.html)
+* Clova Speech Recognition(CSR) : [Android/iOS SDK 사용자 가이드](http://docs.ncloud.com/ko/naveropenapi_v3/speech/recognition-sdk.html), [REST API 사용자 가이드](http://docs.ncloud.com/ko/naveropenapi_v3/speech/recognition-api.html)
+* Papago NMT : [REST API 사용자 가이드](http://docs.ncloud.com/ko/naveropenapi_v3/translation/nmt.html)
+* Chatbot : [Custom API 사용자 가이드](http://docs.ncloud.com/ko/chatbot/chatbot-3-7.html)
 
-## 준비사항
+## 시작전 준비사항
+
+
+
+
 ## 데모 실행
 
 
 
 
 
-
-
-[sdk-website]: http://aws.amazon.com/sdkforphp
-[sdk-forum]: https://forums.aws.amazon.com/forum.jspa?forumID=80
