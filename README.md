@@ -28,8 +28,7 @@
      - Web 서비스 URL : http://localhost
      - Android 앱 패키지 이름 : com.example.user.ncpaidemo
 * **Chatbot 대화시나리오 등록**
-     
-
+  1. 
 
 
 
