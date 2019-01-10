@@ -11,22 +11,23 @@
 * Papago NMT : 인공 신경망기반 기계 번역 API
 * Chatbot : 자연어 처리를 위한 Chatbot Custom API
 
-## API 사용자 가이드
+## API 설명서 및 참조서
 
-* Clova Speech Synthesis(CSS) : [REST API 사용자 가이드](http://docs.ncloud.com/ko/naveropenapi_v3/speech/synthesis.html)
-* Clova Speech Recognition(CSR) : [Android/iOS SDK 사용자 가이드](http://docs.ncloud.com/ko/naveropenapi_v3/speech/recognition-sdk.html), [REST API 사용자 가이드](http://docs.ncloud.com/ko/naveropenapi_v3/speech/recognition-api.html)
-* Papago NMT : [REST API 사용자 가이드](http://docs.ncloud.com/ko/naveropenapi_v3/translation/nmt.html)
-* Chatbot : [Custom API 사용자 가이드](http://docs.ncloud.com/ko/chatbot/chatbot-3-7.html)
+* Clova Speech Synthesis(CSS) : [CSS 설명서](http://docs.ncloud.com/ko/naveropenapi_v3/speech/synthesis.html), [API 참조서](https://apidocs.ncloud.com/ko/ai-naver/clova_speech_synthesis/tts/)
+* Clova Speech Recognition(CSR) : [Android/iOS SDK 설명서](http://docs.ncloud.com/ko/naveropenapi_v3/speech/recognition-sdk.html), [CSR 설명서](http://docs.ncloud.com/ko/naveropenapi_v3/speech/recognition-api.html), [API 참조서](https://apidocs.ncloud.com/ko/ai-naver/clova_speech_recognition/stt/)
+* Papago NMT : [Papago NMT 설명서](http://docs.ncloud.com/ko/naveropenapi_v3/translation/nmt.html), [API 참조서](https://apidocs.ncloud.com/ko/ai-naver/papago_nmt/translation/)
+* Chatbot : [Custom API 설명서](http://docs.ncloud.com/ko/chatbot/chatbot-3-7.html), [Custom API 호출 URL 설명서](http://docs.ncloud.com/ko/chatbot/chatbot-2-5.html)
 
 ## 시작전 준비사항
 
 * **네이버클라우드플랫폼 계정** : [네이버클라우드플랫폼](https://www.ncloud.com/) 계정 보유 및 회원가입 필요
-* **AI·NAVER API Application 등록** : [Application] 등록
+* **AI·NAVER API Application 등록** : [Application](https://console.ncloud.com/mc/solution/naverService/application) 등록
   1. Application 등록시 Service 선택
      - Clova Speech Recognition(CSR), Clova Speech Synthesis(CSS), Papago NMT
   2. 서비스 환경 등록
      - Web 서비스 URL : http://localhost
      - Android 앱 패키지 이름 : com.example.user.ncpaidemo
+* **Chatbot 대화시나리오 등록**
      
 
 
