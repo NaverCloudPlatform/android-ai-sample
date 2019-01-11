@@ -1,4 +1,4 @@
-# android-ai-sample - version 1.0
+# android-ai-sample - 1.0
 
 **네이버클라우드플랫폼 AI 상품**을 쉽게 사용하기 위한, 안드로이드 버전 Sample 소스와 
 안드로이드 모바일에서 실행할 수 있는 apk 파일을 제공합니다.
