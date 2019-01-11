@@ -38,7 +38,7 @@
 * apk 다운로드 폴더 : [android-ai-sample/app/release/](https://github.com/NaverCloudPlatform/android-ai-sample/tree/master/app/release)로 이동후 최신 버전의 apk 파일 다운로드
 * 안드로이드 지원 버전 : 안드로이드 4.4 킷캣 이상
 * 앱 권한 : 앱 설치 후 설정 > 애플리케이션 > 권한 > ***마이크, 저장공간*** 권한 부여(안드로이드 버전마다 다를 수 있음)
-<p align="center"><img width="459" alt="default" src="https://user-images.githubusercontent.com/41188783/50977328-65fc6300-1535-11e9-84ef-c1dfe34f3dd3.png"></p>
+<p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/50977328-65fc6300-1535-11e9-84ef-c1dfe34f3dd3.png"></p>
 
 
 ## 데모
@@ -61,6 +61,28 @@
 <p align="center"><img alt="default" src="https://user-images.githubusercontent.com/41188783/51010826-531b7a00-1599-11e9-8ae8-e2e461358764.png"></p>
      
 <p align="center"><img width="600" alt="default" src="https://user-images.githubusercontent.com/41188783/51010825-531b7a00-1599-11e9-98ad-48bf7eff68f2.png"></p>
+
+### Clova Speech Recognition(CSR)
+
+### Clova Speech Synthesis(CSR)
+
+### Papago NMT
+
+### 음성번역
+
+* 번역 대상 언어를 선택하고 말하기 버튼을 클릭 후 음성으로 입력
+
+<p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/51011382-ae4e6c00-159b-11e9-840f-e83af71d290e.png"></p>
+
+
+### 음성챗봇 (CSR + Chatbot + CSS)
+* 말하기버튼을 클릭하고 Chatbot 대화시나리오에 설정한 질문을 음성으로 입력
+* Chatbot 대화시나리오를 통해 학습시킨 답변이 음성 및 텍스트로 출력되는지 확인
+
+<p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/51011163-c5d92500-159a-11e9-9830-db201b76c8f6.png"></p>
+
+
+
 
 
 ## 소스 예제
