@@ -62,15 +62,33 @@
      
 <p align="center"><img width="600" alt="default" src="https://user-images.githubusercontent.com/41188783/51010825-531b7a00-1599-11e9-98ad-48bf7eff68f2.png"></p>
 
+### Clova Speech Synthesis(CSS)
+
+* 출력된 음성 언어를 선택 한 후, 텍스트 입력
+* 음성 듣기 버튼을 클릭 후 음성으로 출력되는지 확인
+
+<p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/51013533-5406d880-15a6-11e9-9a5d-bf986642ec6f.png"></p>
+
+
 ### Clova Speech Recognition(CSR)
 
-### Clova Speech Synthesis(CSR)
+* 말하기 버튼을 클릭하고 음성으로 입력
+* 음성이 텍스트로 출력되는지 확인
+
+<p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/51013409-94b22200-15a5-11e9-81e4-a17a5fd7839a.png"></p>
 
 ### Papago NMT
+
+* 번역 대상 언어를 선택하고, 텍스트 입력
+* 번역하기 버튼 클릭 후 번역 결과가 텍스트로 출력되는지 확인
+
+<p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/51013596-c1b30480-15a6-11e9-9c07-ee345a5b6817.png"></p>
+
 
 ### 음성번역
 
 * 번역 대상 언어를 선택하고 말하기 버튼을 클릭 후 음성으로 입력
+* 번역된 결과가 음성 및 텍스트로 출력되는지 확인
 
 <p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/51011382-ae4e6c00-159b-11e9-840f-e83af71d290e.png"></p>
 
