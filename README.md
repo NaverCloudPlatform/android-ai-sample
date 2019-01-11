@@ -58,9 +58,9 @@
   - Secret Key : 네이버클라우드플랫폼 Chatbot > 도메인 > 빌드관리 > Custom에 Secret Key 복사 후 설정
   - API Gateway URL : 네이버클라우드플랫폼 API Gateway > My Products > APIs > Stages 에 Invoke URL 복사 후 설정
  
-<p align="center"><img alt="default" src="https://user-images.githubusercontent.com/41188783/51009955-76dcc100-1595-11e9-85dc-8cfb8dbf86c4.png"></p>
+<p align="center"><img alt="default" src="https://user-images.githubusercontent.com/41188783/51010826-531b7a00-1599-11e9-8ae8-e2e461358764.png"></p>
      
-<p align="center"><img width="600" alt="default" src="https://user-images.githubusercontent.com/41188783/51009952-76dcc100-1595-11e9-97fd-f5d18410f57a.png"></p>
+<p align="center"><img width="600" alt="default" src="https://user-images.githubusercontent.com/41188783/51010825-531b7a00-1599-11e9-98ad-48bf7eff68f2.png"></p>
 
 
 ## 소스 예제
