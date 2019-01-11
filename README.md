@@ -38,7 +38,7 @@
   - Chatbot 대화시나리오가 없을 경우, 데모앱의 음성 챗봇 기능은 사용하지 못함 (CSS,CSR,Papago NMT 데모용일 경우 설정하지 않아도 됨)
 
 ## 데모 앱 설치
-* apk 다운로드 폴더 : [android-ai-sample/app/release/](https://github.com/NaverCloudPlatform/android-ai-sample/tree/master/app/release)로 이동후 최신 버전의 apk 파일 다운로드
+* apk 다운로드 폴더 : [android-ai-sample/app/release/](https://github.com/NaverCloudPlatform/android-ai-sample/tree/master/app/release)로 이동후 최신 버전의 apk 파일 다운로드 (NCP-AI-Demo-1.x-yyyymmdd-release.apk)
 * 안드로이드 지원 버전 : 안드로이드 4.4 킷캣 이상
 * 미디어 볼륨이 켜져 있어야 정상적으로 음성 출력
 * 앱 권한 : 앱 설치 후 설정 > 애플리케이션 > 권한 > ***마이크, 저장공간*** 권한 부여(안드로이드 버전마다 다를 수 있음)
