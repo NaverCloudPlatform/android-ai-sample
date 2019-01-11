@@ -46,21 +46,21 @@
 ### 인증 설정
 * 메뉴 : 우측 상단의 메뉴 선택 후 인증 설정 메뉴 선택
 
-![default](https://user-images.githubusercontent.com/41188783/51009028-b5707c80-1591-11e9-9aad-556dd29ba4e4.png)
+<p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/51009028-b5707c80-1591-11e9-9aad-556dd29ba4e4.png"></p>
 
 * Application Key 설정
   - 네이버클라우드플랫폼 AI NAVER API > Application에 등록된 Application의 Client ID, Client Secret 복사 후 설정
 
-![applicationkey](https://user-images.githubusercontent.com/41188783/51010046-e05ccf80-1595-11e9-8b16-f7cb39992376.png)
+<p align="center"><img width="600" alt="default" src="https://user-images.githubusercontent.com/41188783/51010046-e05ccf80-1595-11e9-8b16-f7cb39992376.png"></p>
+
  
 * Chatbot 접속 정보 설정
   - Secret Key : 네이버클라우드플랫폼 Chatbot > 도메인 > 빌드관리 > Custom에 Secret Key 복사 후 설정
-
-![chatbot_custom](https://user-images.githubusercontent.com/41188783/51009955-76dcc100-1595-11e9-85dc-8cfb8dbf86c4.png)
-
   - API Gateway URL : 네이버클라우드플랫폼 API Gateway > My Products > APIs > Stages 에 Invoke URL 복사 후 설정
-
-![chatbot_apigateway](https://user-images.githubusercontent.com/41188783/51009952-76dcc100-1595-11e9-97fd-f5d18410f57a.png)
+ 
+<p align="center"><img alt="default" src="https://user-images.githubusercontent.com/41188783/51009955-76dcc100-1595-11e9-85dc-8cfb8dbf86c4.png"></p>
+     
+<p align="center"><img width="600" alt="default" src="https://user-images.githubusercontent.com/41188783/51009952-76dcc100-1595-11e9-97fd-f5d18410f57a.png"></p>
 
 
 ## 소스 예제
