@@ -45,7 +45,10 @@
 
 ### 인증 설정
 * 메뉴 : 우측 상단의 메뉴 선택 후 인증 설정 메뉴 선택
+![default](https://user-images.githubusercontent.com/41188783/51009028-b5707c80-1591-11e9-9aad-556dd29ba4e4.png)
+
 * Application Key 설정
+
 * Chatbot 접속 정보 설정
 
 
