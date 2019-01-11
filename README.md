@@ -23,11 +23,14 @@
 * **네이버클라우드플랫폼 계정** : [네이버클라우드플랫폼](https://www.ncloud.com/) 계정 보유 및 회원가입 필요
 * **AI·NAVER API Application 등록** ([Application 등록 설명서](http://docs.ncloud.com/ko/naveropenapi_v3/application.html))
   - Application 등록시 Service 선택 : Clova Speech Recognition(CSR), Clova Speech Synthesis(CSS), Papago NMT
+  - 데모앱에서 등록가능한 인증키는 하나이므로, 하나의 Application에 CSR, CSS, Papago NMT를 등록
   - Web 서비스 URL : http://localhost
   - Android 앱 패키지 이름 : com.example.user.ncpaidemo
-  - 데모앱에서 등록가능한 인증키는 하나이므로, 하나의 Application에 CSR, CSS, Papago NMT를 등록해야 함
+  
   <img width="808" alt="application_reg" src="https://user-images.githubusercontent.com/41188783/50975348-af967f00-1530-11e9-8fa8-d1f965e5cf34.png">
-
+  
+  <img width="808" alt="application_reg" src="https://user-images.githubusercontent.com/41188783/51020496-10ba6300-15c2-11e9-9393-a3e08f5cea4e.png">
+  
 * **Chatbot 대화시나리오 구현** ([Chatbot 퀵스타트 설명서](http://docs.ncloud.com/ko/chatbot/chatbot-1-1.html))
   - 대화 시나리오 생성 및 학습 : 도메인 생성 > 대화 시나리오 생성 > 대화모델 빌드 > 테스트
   - 채널 연동 : 도메인 > 빌더 실행 > 챗봇 설정 > 메신저 연동 > Custom 설정([Custom 설정 & API Gateway 설정 설명서](http://docs.ncloud.com/ko/chatbot/chatbot-2-5.html))
