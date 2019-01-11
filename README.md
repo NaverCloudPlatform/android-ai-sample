@@ -117,13 +117,124 @@
     │           ├── NmtActivity2.java                        # 음성번역 데모 Activity (CSS, Papago NMT, CSR)
     │           ├── VoiceChatbotActivity.java                # 음성챗봇 데모 Activity (CSS, Chatbot, CSR)
     │       ├── main/java/com/ncp/ai/demo/process            [REST API, SDK 호출 모듈]
-    │           ├── ChatbotProc.java                         # Chatbot Custom API
-    │           ├── CsrProc.java                             # CSR Android SDK
-    │           ├── CssProc.java                             # CSS REST API
-    │           ├── CsrProc.java                             # CSR REST API
+    │           ├── ChatbotProc.java                         # Chatbot Custom API 사용
+    │           ├── CsrProc.java                             # CSR Android SDK 사용
+    │           ├── CssProc.java                             # CSS REST API 사용
+    │           ├── NmtProc.java                             # Papago NMT API 사용
     │   └── ...                 
     └── ...
 
+## API 사용 간단 예제
+
+### Clova Speech Synthesis HTTP Request 예제 ([source](./app/src/main/java/com/ncp/ai/demo/process/CssProc.java))
+
+```java
+  String text = URLEncoder.encode(msg, "UTF-8");
+  String apiURL = "https://naveropenapi.apigw.ntruss.com/voice/v1/tts";
+  URL url = new URL(apiURL);
+  HttpURLConnection con = (HttpURLConnection)url.openConnection();
+  con.setRequestMethod("POST");
+  con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", clientId);
+  con.setRequestProperty("X-NCP-APIGW-API-KEY", clientSecret);
+  // post request
+  String postParams = "speaker="+speaker+"&speed=0&text="+text;
+  System.out.println(postParams);
+  con.setDoOutput(true);
+  DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+  wr.writeBytes(postParams);
+  wr.flush();
+  wr.close();
+
+```
+
+### Chatbot Custom API HTTP Request 예제 ([source](./app/src/main/java/com/ncp/ai/demo/process/ChatbotProc.java))
+
+```java
+  URL url = new URL(apiURL);
+
+  String message = getReqMessage(voiceMessage);
+  System.out.println("##" + message);
+
+  String encodeBase64String = makeSignature(message, secretKey);
+
+  HttpURLConnection con = (HttpURLConnection)url.openConnection();
+  con.setRequestMethod("POST");
+  con.setRequestProperty("Content-Type", "application/json;UTF-8");
+  con.setRequestProperty("X-NCP-CHATBOT_SIGNATURE", encodeBase64String);
+
+  // post request
+  con.setDoOutput(true);
+  DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+  wr.write(message.getBytes("UTF-8"));
+  wr.flush();
+  wr.close();
+```
+
+### Chatbot Custom API Signature 생성 예제 ([source](./app/src/main/java/com/ncp/ai/demo/process/ChatbotProc.java))
+```java
+  public static String makeSignature(String message, String secretKey) {
+
+        String encodeBase64String = "";
+
+        try {
+            byte[] secrete_key_bytes = secretKey.getBytes("UTF-8");
+
+            SecretKeySpec signingKey = new SecretKeySpec(secrete_key_bytes, "HmacSHA256");
+            Mac mac = Mac.getInstance("HmacSHA256");
+            mac.init(signingKey);
+
+            byte[] rawHmac = mac.doFinal(message.getBytes("UTF-8"));
+            encodeBase64String = Base64.encodeToString(rawHmac, Base64.NO_WRAP);
+
+            return encodeBase64String;
+
+        } catch (Exception e){
+            System.out.println(e);
+        }
+
+        return encodeBase64String;
+
+    }
+
+```
+
+### Clova Speech Recognition Android SDK 사용 예제 ([source](./app/src/main/java/com/example/user/ncpaidemo/CsrActivity.java))
+
+```java
+    private CsrProc naverRecognizer;
+    private TextView txtResult;
+    private Button btnStart;
+    private String mResult;
+    private AudioWriterPCM writer;
+    // Handle speech recognition Messages.
+    private void handleMessage(Message msg) {
+        switch (msg.what) {
+            case R.id.clientReady: // 음성인식 준비 가능
+                txtResult.setText("Connected");
+                writer = new AudioWriterPCM(Environment.getExternalStorageDirectory().getAbsolutePath() + "/NaverSpeechTest");
+                writer.open("Test");
+                break;
+            case R.id.audioRecording:
+                writer.write((short[]) msg.obj);
+                break;
+            case R.id.partialResult:
+                mResult = (String) (msg.obj);
+                txtResult.setText(mResult);
+                break;
+            case R.id.finalResult: // 최종 인식 결과
+                SpeechRecognitionResult speechRecognitionResult = (SpeechRecognitionResult) msg.obj;
+                List<String> results = speechRecognitionResult.getResults();
+                StringBuilder strBuf = new StringBuilder();
+                for(String result : results) {
+                    strBuf.append(result);
+                    //strBuf.append("\n");
+                    break;
+                }
+                mResult = strBuf.toString();
+                txtResult.setText(mResult);
+                break;
+
+```
 
 
 
