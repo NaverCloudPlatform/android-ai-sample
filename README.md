@@ -99,12 +99,31 @@
 
 <p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/51011163-c5d92500-159a-11e9-9830-db201b76c8f6.png"></p>
 
+## 주요 소스 구조
 
+    .
+    ├── ...
+    ├── app                    
+    │   ├── release                                          [apk 파일]            
+    │   ├── src              
+    │       ├── ...          
+    │       ├── main/java/com/example/user/ncpaidemo         [View]
+    │           ├── AuthActivity.java                        # 인증정보 설정 Activity
+    │           ├── BaseActivity.java                        # 공통 메뉴 Activity
+    │           ├── CsrActivity.java                         # Clova Speech Recognition 데모 Activity
+    │           ├── CssActivity.java                         # Clova Speech Synthesis 데모 Activity
+    │           ├── MainActivity.java                        # 홈 Activity
+    │           ├── NmtActivity.java                         # Papago NMT 데모 Activity
+    │           ├── NmtActivity2.java                        # 음성번역 데모 Activity (CSS, Papago NMT, CSR)
+    │           ├── VoiceChatbotActivity.java                # 음성챗봇 데모 Activity (CSS, Chatbot, CSR)
+    │       ├── main/java/com/ncp/ai/demo/process            [REST API, SDK 호출 모듈]
+    │           ├── ChatbotProc.java                         # Chatbot Custom API
+    │           ├── CsrProc.java                             # CSR Android SDK
+    │           ├── CssProc.java                             # CSS REST API
+    │           ├── CsrProc.java                             # CSR REST API
+    │   └── ...                 
+    └── ...
 
-
-
-## 소스 예제
-  - 
 
 
 
