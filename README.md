@@ -1,10 +1,10 @@
 # android-ai-sample - version 1.0
 
-**네이버클라우드플랫폼 AI 상품**을 더 쉽게 사용하기 위한, 안드로이드 버전 Sample 소스와 
-안드로이드 모바일에서 실행할 수 있는 apk 파일을 제공 합니다.
+**네이버클라우드플랫폼 AI 상품**을 쉽게 사용하기 위한, 안드로이드 버전 Sample 소스와 
+안드로이드 모바일에서 실행할 수 있는 apk 파일을 제공합니다.
+여러 AI API 사용 방법을 알 수 있고, 데모를 실행할 수 있습니다.
 
-
-## API 데모 및 소스
+## 사용한 AI API
 
 * Clova Speech Synthesis(CSS) : 텍스트를 음성으로 읽어주는 음성 합성 API
 * Clova Speech Recognition(CSR) : 사람의 목소리를 텍스트로 바꿔주는 음성 인식 API
@@ -85,7 +85,7 @@
 <p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/51013596-c1b30480-15a6-11e9-9c07-ee345a5b6817.png"></p>
 
 
-### 음성번역
+### 음성번역 (CSR + Papago NMT + CSS)
 
 * 번역 대상 언어를 선택하고 말하기 버튼을 클릭 후 음성으로 입력
 * 번역된 결과가 음성 및 텍스트로 출력되는지 확인
@@ -94,6 +94,7 @@
 
 
 ### 음성챗봇 (CSR + Chatbot + CSS)
+
 * 말하기버튼을 클릭하고 Chatbot 대화시나리오에 설정한 질문을 음성으로 입력
 * Chatbot 대화시나리오를 통해 학습시킨 답변이 음성 및 텍스트로 출력되는지 확인
 
