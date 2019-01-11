@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="55dp"
         android:text="말하기 버튼을 선택하고 음성을 입력해주세요."
         android:textColor="@android:color/background_dark"
@@ -23,7 +23,7 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
-        android:layout_height="17dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="55dp"

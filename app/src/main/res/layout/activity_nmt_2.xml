@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/textView17"
         android:layout_width="159dp"
-        android:layout_height="18dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
         android:layout_marginTop="24dp"
         android:text="Papago NMT 번역결과"
@@ -21,7 +21,7 @@
     <TextView
         android:id="@+id/textView_nmt2"
         android:layout_width="wrap_content"
-        android:layout_height="17dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="55dp"
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="55dp"
         android:text="[말하기] 버튼을 Click하시고 음성을 입력해주세요."
         android:textColor="@android:color/background_dark"
@@ -50,28 +50,27 @@
     <Spinner
         android:id="@+id/nmt_lang_source_spinner"
         android:layout_width="129dp"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="47dp"
         android:layout_marginTop="20dp"
         android:entries="@array/nmt_lang_source_spinner"
-        app:layout_constraintTop_toBottomOf="@+id/textView_notice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        ></Spinner>
+        app:layout_constraintTop_toBottomOf="@+id/textView_notice"></Spinner>
 
     <Spinner
         android:id="@+id/nmt_lang_target_spinner"
         android:layout_width="131dp"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="197dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:entries="@array/nmt_lang_target_spinner"
-        app:layout_constraintTop_toBottomOf="@+id/textView_notice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"></Spinner>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_notice"></Spinner>
 
     <TextView
         android:id="@+id/textView_arrow"

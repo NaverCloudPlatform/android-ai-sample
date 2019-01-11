@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="8dp"
         android:text="NAVER CLOUD PLATFORM AI Demo"
         android:textColor="@android:color/black"
@@ -24,31 +24,63 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_exp"
-        android:layout_width="353dp"
-        android:layout_height="271dp"
-        android:layout_marginTop="24dp"
-        android:text="Naver Cloud Platfom AI Demo 사용법"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_exp4" />
-
-    <TextView
         android:id="@+id/textView_exp4"
         android:layout_width="324dp"
         android:layout_height="81dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="4dp"
         android:text="CSR, CSS, Papago NMT, Chatbot을 테스트할 수 있는 데모 앱입니다. 정상 동작을 위해서 정확한 인증정보 설정을 해주세요."
+        android:textAlignment="viewStart"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView_exp"
+        android:layout_width="320dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:text="사용 가이드 및 소스"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_exp4" />
+
+    <TextView
+        android:id="@+id/textView_exp5"
+        android:layout_width="318dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="4dp"
+        android:text="https://github.com/NaverCloudPlatform/android-ai-sample"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:autoLink="web"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_exp4" />
+
+    <TextView
+        android:id="@+id/textView_version"
+        android:layout_width="261dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="viewEnd"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
