@@ -21,7 +21,7 @@
 ## 시작전 준비사항
 
 * **네이버클라우드플랫폼 계정** : [네이버클라우드플랫폼](https://www.ncloud.com/) 계정 보유 및 회원가입 필요
-* **AI·NAVER API Application 등록** ([Application 등록 설명서](https://console.ncloud.com/mc/solution/naverService/application))
+* **AI·NAVER API Application 등록** ([Application 등록 설명서](http://docs.ncloud.com/ko/naveropenapi_v3/application.html))
   - Application 등록시 Service 선택 : Clova Speech Recognition(CSR), Clova Speech Synthesis(CSS), Papago NMT
   - Web 서비스 URL : http://localhost
   - Android 앱 패키지 이름 : com.example.user.ncpaidemo
