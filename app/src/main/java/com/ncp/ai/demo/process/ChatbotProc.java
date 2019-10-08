@@ -16,6 +16,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.security.Timestamp;
 import java.util.Date;
+import java.util.UUID;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -35,8 +36,9 @@ public class ChatbotProc {
             //String apiURL = "https://ex9av8bv0e.apigw.ntruss.com/custom_chatbot/prod/";
 
             URL url = new URL(apiURL);
-
-            String message = getReqMessage(voiceMessage);
+			// userId is a unique code for each chat user, not a fixed value, recommend use UUID. use different id for each user could help you to split chat history for users.
+            String userId = UUID.randomUUID().toString();
+            String message = getReqMessage(voiceMessage, userId);
             System.out.println("##" + message);
 
             String encodeBase64String = makeSignature(message, secretKey);
@@ -103,7 +105,7 @@ public class ChatbotProc {
 
     }
 
-    public static String getReqMessage(String voiceMessage) {
+    public static String getReqMessage(String voiceMessage, String userId) {
 
         String requestBody = "";
 
@@ -116,7 +118,7 @@ public class ChatbotProc {
             System.out.println("##"+timestamp);
 
             obj.put("version", "v2");
-            obj.put("userId", "U47b00b58c90f8e47428af8b7bddc1231heo2");
+            obj.put("userId", userId);
             obj.put("timestamp", timestamp);
 
             JSONObject bubbles_obj = new JSONObject();
