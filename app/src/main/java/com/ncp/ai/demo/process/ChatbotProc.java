@@ -36,7 +36,7 @@ public class ChatbotProc {
             //String apiURL = "https://ex9av8bv0e.apigw.ntruss.com/custom_chatbot/prod/";
 
             URL url = new URL(apiURL);
-			// userId is a unique code for each chat user, not a fixed value, recommend use UUID. use different id for each user could help you to split chat history for users.
+            // userId is a unique code for each chat user, not a fixed value, recommend use UUID. use different id for each user could help you to split chat history for users.
             String userId = UUID.randomUUID().toString();
             String message = getReqMessage(voiceMessage, userId);
             System.out.println("##" + message);
