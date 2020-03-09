@@ -75,7 +75,8 @@
 <p align="center"><img width="600" alt="default" src="https://user-images.githubusercontent.com/41188783/51010825-531b7a00-1599-11e9-98ad-48bf7eff68f2.png"></p>
 
 * OCR 접속 정보 설정
-  - Secret Key : 네이버클라우드플랫폼 OCR > 도메인 목록 > General TEXT OCR > Secret Key, APIGW Invoke URL 복사 후 설정
+  - Secret Key : 네이버클라우드플랫폼 OCR > 도메인 목록 > General TEXT OCR > Secret Key
+  - API Gateway URL : 네이버클라우드플랫폼 OCR > 도메인 목록 > General TEXT OCR > APIGW Invoke URL
   
 <p align="center"><img alt="default" alt="default" src="https://user-images.githubusercontent.com/41188783/76212576-21a94780-624c-11ea-8f42-710fee53654e.png"></p>
 
