@@ -10,6 +10,7 @@
 * Clova Speech Recognition(CSR) : 사람의 목소리를 텍스트로 바꿔주는 음성 인식 API
 * Papago NMT : 인공 신경망기반 기계 번역 API
 * Chatbot : 자연어 처리를 위한 Chatbot Custom API
+* OCR : 이미지의 글자를 디지털 데이터로 추출하는 API(General)
 
 ## 관련 API 설명서 및 참조서
 
@@ -17,6 +18,7 @@
 * Clova Speech Recognition(CSR) : [Android/iOS SDK 설명서](http://docs.ncloud.com/ko/naveropenapi_v3/speech/recognition-sdk.html), [CSR 설명서](http://docs.ncloud.com/ko/naveropenapi_v3/speech/recognition-api.html), [API 참조서](https://apidocs.ncloud.com/ko/ai-naver/clova_speech_recognition/stt/)
 * Papago NMT : [Papago NMT 설명서](http://docs.ncloud.com/ko/naveropenapi_v3/translation/nmt.html), [API 참조서](https://apidocs.ncloud.com/ko/ai-naver/papago_nmt/translation/)
 * Chatbot : [Custom API 설명서](http://docs.ncloud.com/ko/chatbot/chatbot-3-7.html), [Custom API 호출 URL 설명서](http://docs.ncloud.com/ko/chatbot/chatbot-2-5.html)
+* OCR : [OCR API 호출 가이드](https://docs.ncloud.com/ko/ocr/ocr-1-4.html), [OCR API 호출 설명서](https://apidocs.ncloud.com/ko/ai-application-service/ocr/ocr/)
 
 ## 시작전 준비사항
 
@@ -36,6 +38,10 @@
   - 채널 연동 : 도메인 > 빌더 실행 > 챗봇 설정 > 메신저 연동 > Custom 설정([Custom 설정 & API Gateway 설정 설명서](http://docs.ncloud.com/ko/chatbot/chatbot-2-5.html))
   - API Gateway 설정 : API Gateway > My Product 
   - Chatbot 대화시나리오가 없을 경우, 데모앱의 음성 챗봇 기능은 사용하지 못함 (CSS,CSR,Papago NMT 데모용일 경우 설정하지 않아도 됨)
+* **OCR 설정** 
+  - OCR API는 Template OCR과 General OCR로 나누어 집니다. Template OCR은 정해진 규격 및 영역에서 Template 생성후 변환을 하는 API 이고,
+    General OCR 은 전송한 이미지의 텍스트를 전부 추출하는 API 입니다. 
+  - 본 샘플 소스에서는 General OCR API 호출하는 방식을 작성 했습니다.
 
 ## 데모 앱 설치
 * apk 다운로드 폴더 : [android-ai-sample/app/release/](https://github.com/NaverCloudPlatform/android-ai-sample/tree/master/app/release)로 이동후 최신 버전의 apk 파일 다운로드 (NCP-AI-Demo-1.x-yyyymmdd-release.apk)
@@ -65,6 +71,13 @@
 <p align="center"><img alt="default" src="https://user-images.githubusercontent.com/41188783/51010826-531b7a00-1599-11e9-8ae8-e2e461358764.png"></p>
      
 <p align="center"><img width="600" alt="default" src="https://user-images.githubusercontent.com/41188783/51010825-531b7a00-1599-11e9-98ad-48bf7eff68f2.png"></p>
+
+* OCR 접속 정보 설정
+  - Secret Key : 네이버클라우드플랫폼 OCR > 도메인 목록 > General TEXT OCR > Secret Key, APIGW Invoke URL 복사 후 설정
+  
+<p align="center"><<img alt="default" alt="default" src="https://user-images.githubusercontent.com/41188783/76211226-17d21500-6249-11ea-919d-d5c7ae8f51dc.png"></p>
+
+  
 
 ### Clova Speech Synthesis(CSS)
 
@@ -104,6 +117,13 @@
 
 <p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/51011163-c5d92500-159a-11e9-9830-db201b76c8f6.png"></p>
 
+### (OCR)
+* ObjectStorage에 이미지 업로드 후 공개로 설정
+* ncp.ai.demo.process.OcrProc.java 소스의 objectStorageURL을 ObjectStorage에 업로드한 URL로 변경 합니다.
+* 변환하기 버튼을 클릭 합니다.
+
+<p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/76211727-397fcc00-624a-11ea-887d-8b69452c24a7.png"></p>
+
 ## 주요 소스 구조
 
     .
@@ -115,11 +135,13 @@
     │       ├── main/java/com/example/user/ncpaidemo         [View]
     │           ├── AuthActivity.java                        # 인증정보 설정 Activity
     │           ├── BaseActivity.java                        # 공통 메뉴 Activity
+    │           ├── CpvActivity.java                         # Clova Premium Voice 데모 Activity
     │           ├── CsrActivity.java                         # Clova Speech Recognition 데모 Activity
     │           ├── CssActivity.java                         # Clova Speech Synthesis 데모 Activity
     │           ├── MainActivity.java                        # 홈 Activity
     │           ├── NmtActivity.java                         # Papago NMT 데모 Activity
     │           ├── NmtActivity2.java                        # 음성번역 데모 Activity (CSS, Papago NMT, CSR)
+    │           ├── OCRActivity.java                         # 이미지 텍스트 변환 Activity (OCR)
     │           ├── VoiceChatbotActivity.java                # 음성챗봇 데모 Activity (CSS, Chatbot, CSR)
     │       ├── main/java/com/ncp/ai/demo/process            [REST API, SDK 호출 모듈]
     │           ├── ChatbotProc.java                         # Chatbot Custom API 사용
