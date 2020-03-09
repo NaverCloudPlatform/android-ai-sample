@@ -48,13 +48,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txt_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_start"
-        android:layout_centerHorizontal="true"
-        android:singleLine="false" />
 
     <TextView
         android:id="@+id/textViewCsrResult"

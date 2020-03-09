@@ -25,8 +25,10 @@
         <activity android:name=".CsrActivity" />
         <activity android:name=".AuthActivity" />
         <activity android:name=".VoiceChatbotActivity" />
-        <activity android:name=".NmtActivity"></activity>
-        <activity android:name=".NmtActivity2"/>
+        <activity android:name=".NmtActivity" />
+        <activity android:name=".NmtActivity2" />
+        <activity android:name=".CpvActivity" />
+        <activity android:name=".OcrActivity" />
     </application>
 
 </manifest>

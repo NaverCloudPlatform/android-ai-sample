@@ -1,7 +1,5 @@
 package com.ncp.ai.demo.process;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Environment;
 
@@ -16,13 +14,14 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class CssProc {
+public class CpvProc {
+
 
     public static void main(String msg, String speaker, String clientId, String clientSecret) {
 
         try {
             String text = URLEncoder.encode(msg, "UTF-8");
-            String apiURL = "https://naveropenapi.apigw.ntruss.com/voice/v1/tts";
+            String apiURL = "https://naveropenapi.apigw.ntruss.com/voice-premium/v1/tts";
             URL url = new URL(apiURL);
             HttpURLConnection con = (HttpURLConnection)url.openConnection();
             con.setRequestMethod("POST");
@@ -81,4 +80,6 @@ public class CssProc {
             System.out.println(e);
         }
     }
+
+
 }

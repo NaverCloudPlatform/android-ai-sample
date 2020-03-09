@@ -1,25 +1,16 @@
 package com.ncp.ai.demo.process;
 
-import android.media.MediaPlayer;
-import android.os.Environment;
 import android.util.Base64;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
-import java.security.Timestamp;
 import java.util.Date;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
-import android.util.Base64;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

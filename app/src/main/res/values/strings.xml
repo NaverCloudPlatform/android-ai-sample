@@ -6,5 +6,7 @@
     <string name="action_settings">Settings</string>
     <string name="str_start">말하기</string>
     <string name="str_stop">중지</string>
+    <string name="title_activity_cpv">CpvActivity</string>
+    <string name="title_activity_ocr">OcrActivity</string>
 
 </resources>

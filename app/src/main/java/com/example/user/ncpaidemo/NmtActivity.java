@@ -101,8 +101,6 @@ public class NmtActivity extends BaseActivity {
         } catch (Exception e){
 
         }
-
-
     }
 
     public class PapagoNmtTask extends AsyncTask<String, String, String> {

@@ -18,6 +18,11 @@
         app:showAsAction="never"/>
 
     <item
+        android:id="@+id/menu_cpv"
+        android:title="Clova Premium Voice"
+        app:showAsAction="never"/>
+
+    <item
         android:id="@+id/menu_nmt"
         android:title="Papago NMT"
         app:showAsAction="never"/>
@@ -29,6 +34,11 @@
     <item
         android:id="@+id/menu_voice_chatbot"
         android:title="음성챗봇"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_ocr"
+        android:title="OCR"
         app:showAsAction="never"/>
 
     <item
