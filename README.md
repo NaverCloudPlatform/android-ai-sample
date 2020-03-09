@@ -7,6 +7,7 @@
 ## 사용한 AI API
 
 * Clova Speech Synthesis(CSS) : 텍스트를 음성으로 읽어주는 음성 합성 API
+* Clova Premium Voice(CPV) : 사람에 가까운 자연스럽고 깨끗한 합성음을 제공하는 음성 합성 API
 * Clova Speech Recognition(CSR) : 사람의 목소리를 텍스트로 바꿔주는 음성 인식 API
 * Papago NMT : 인공 신경망기반 기계 번역 API
 * Chatbot : 자연어 처리를 위한 Chatbot Custom API
@@ -15,6 +16,7 @@
 ## 관련 API 설명서 및 참조서
 
 * Clova Speech Synthesis(CSS) : [CSS 설명서](http://docs.ncloud.com/ko/naveropenapi_v3/speech/synthesis.html), [API 참조서](https://apidocs.ncloud.com/ko/ai-naver/clova_speech_synthesis/tts/)
+* Clova Premium Voice(CPV) : [CSS 설명서](https://docs.ncloud.com/ko/naveropenapi_v3/speech/clova_premium_voice.html), [API 참조서](https://apidocs.ncloud.com/ko/ai-naver/clova_premium_voice/)
 * Clova Speech Recognition(CSR) : [Android/iOS SDK 설명서](http://docs.ncloud.com/ko/naveropenapi_v3/speech/recognition-sdk.html), [CSR 설명서](http://docs.ncloud.com/ko/naveropenapi_v3/speech/recognition-api.html), [API 참조서](https://apidocs.ncloud.com/ko/ai-naver/clova_speech_recognition/stt/)
 * Papago NMT : [Papago NMT 설명서](http://docs.ncloud.com/ko/naveropenapi_v3/translation/nmt.html), [API 참조서](https://apidocs.ncloud.com/ko/ai-naver/papago_nmt/translation/)
 * Chatbot : [Custom API 설명서](http://docs.ncloud.com/ko/chatbot/chatbot-3-7.html), [Custom API 호출 URL 설명서](http://docs.ncloud.com/ko/chatbot/chatbot-2-5.html)
@@ -85,6 +87,12 @@
 * 음성 듣기 버튼을 클릭 후 음성으로 출력되는지 확인
 
 <p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/51013533-5406d880-15a6-11e9-9a5d-bf986642ec6f.png"></p>
+
+### Clova Premium Voice(CPV)
+* 출력된 음성 언어를 선택 한 후, 텍스트 입력(현재 nara만 지원)
+* 음성 듣기 버튼을 클릭 후 음성으로 출력되는지 확인
+
+<p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/76212436-ca0adc00-624b-11ea-9dfc-72f39d24b147.png"></p>
 
 
 ### Clova Speech Recognition(CSR)
