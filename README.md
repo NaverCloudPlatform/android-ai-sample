@@ -126,7 +126,7 @@
 
 <p align="center"><img width="300" alt="default" src="https://user-images.githubusercontent.com/41188783/51011163-c5d92500-159a-11e9-9830-db201b76c8f6.png"></p>
 
-### (OCR)
+### 이미지 인식후 텍스트 변환(OCR)
 * ObjectStorage에 이미지 업로드 후 공개로 설정
 * ncp.ai.demo.process.OcrProc.java 소스의 objectStorageURL을 ObjectStorage에 업로드한 URL로 변경 합니다.
 * 변환하기 버튼을 클릭 합니다.
